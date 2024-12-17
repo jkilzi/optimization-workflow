@@ -1,0 +1,21 @@
+version: "1.0"
+specVersion: "0.8"
+id: optimize
+name: Optimization workflow
+description: Optimizes a cluster's workload resources
+dataInputSchema: schemas/data-input.schema.json
+start: Echo workflow inputs
+functions:
+  - name: log
+    type: custom
+    operation: sysout
+states:
+  - name: Echo workflow inputs
+    type: operation
+    actions:
+      - functionRef:
+          refName: log
+          arguments:
+            message: "."
+    end:
+      terminate: true
