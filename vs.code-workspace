@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "kogito.swf.automaticallyOpenDiagramEditorAlongsideTextEditor": "Open automatically",
+    "redhat.telemetry.enabled": false
+  },
+  "extensions": {
+    "recommendations": [
+      "kie-group.swf-vscode-extension",
+      "vscjava.vscode-java-pack",
+      "redhat.vscode-yaml"
+    ]
+  }
+}

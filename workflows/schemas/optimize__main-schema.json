@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "classpath:/schemas/echo_main-schema.json",
+  "title": "Inputs",
+  "type": "object",
+  "properties": {
+    "clusterName": {
+      "title": "Cluster name",
+      "description": "",
+      "type": "string"
+    },
+    "clusterUuid": {
+      "title": "Cluster UUID",
+      "description": "",
+      "type": "string"
+    },
+    "project": {
+      "title": "Project",
+      "description": "",
+      "type": "string"
+    },
+    "workload": {
+      "title": "Workload",
+      "description": "",
+      "type": "string"
+    },
+    "container": {
+      "title": "Container",
+      "description": "",
+      "type": "string"
+    },
+    "limits": {
+      "title": "Limits",
+      "description": "Limits describes the maximum amount of compute resources allowed.",
+      "type": "object",
+      "properties": {
+        "cpu": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "memory": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      }
+    },
+    "requests": {
+      "title": "Requests",
+      "description": "Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value.",
+      "type": "object",
+      "properties": {
+        "cpu": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "memory": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "clusterName",
+    "clusterUuid",
+    "project",
+    "workload",
+    "container",
+    "limits"
+  ]
+}
